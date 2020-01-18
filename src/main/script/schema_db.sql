@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS db_project_attachment;
+
+CREATE TABLE db_project_attachment.usr(
+	id BIGINT AUTO_INCREMENT,
+	code VARCHAR(16) DEFAULT NULL,
+	name VARCHAR(50) NOT NULL,
+	surname VARCHAR(50) NOT NULL,
+	email VARCHAR(70) DEFAULT NULL,
+	born_date DATETIME DEFAULT NULL,
+	
+	PRIMARY KEY(ID)
+);
+
+CREATE TABLE db_project_attachment.ATTCHMENT(
+	id BIGINT AUTO_INCREMENT,
+	content BLOB NOT NULL,
+	user_id BIGINT,
+	
+	PRIMARY KEY(id),
+	FOREIGN KEY(user_id) REFERENCES usr(id)
+);
