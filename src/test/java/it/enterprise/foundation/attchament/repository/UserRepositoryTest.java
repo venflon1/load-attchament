@@ -69,6 +69,5 @@ public class UserRepositoryTest {
 		assertNotNull(usr);
 		System.out.println(usr);
 		log.info("class " + UserRepositoryTest.class.getSimpleName() + "- method testFindById()  - END");
-
 	}
 }

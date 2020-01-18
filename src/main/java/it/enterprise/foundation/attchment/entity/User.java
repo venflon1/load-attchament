@@ -43,7 +43,7 @@ public class User implements Serializable{
 	@Column(name="born_date")
 	private LocalDate bornDate;
 	
-	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(name="user_id")
 	private List<Attchment> listAttchments;
 

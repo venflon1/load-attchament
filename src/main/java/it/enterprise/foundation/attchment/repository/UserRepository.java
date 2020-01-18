@@ -65,7 +65,7 @@ public class UserRepository {
 			 trx = session.beginTransaction();
 			
 			 retValue =  session.find(User.class, id);
-			
+			 retValue.getListAttchments().get(0); // to avoid LazyException
 		 	 trx.commit();
 		} catch (Exception ex) {
 			log.info("class " + UserRepository.class.getSimpleName() + "- error in method findById(Long id) on transcation commit");
